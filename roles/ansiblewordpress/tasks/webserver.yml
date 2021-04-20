@@ -5,7 +5,7 @@
   service: name=httpd state=restarted enabled=yes
   tags: webserver
 - name: Enable http service on the remote host
-  ansible.posix.firewalld:
+  firewalld:
     service: http
     permanent: true
     state: enabled
