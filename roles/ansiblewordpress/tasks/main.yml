@@ -11,7 +11,7 @@
    - php-gd
    - php-xml
    - php-mbstring
-     #   - php-mcrypt
+   - php-mcrypt
    - php-xmlrpc
    - unzip
    - wget
