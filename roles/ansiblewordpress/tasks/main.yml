@@ -1,6 +1,3 @@
-- name: Downloading and configuring WORDPRESS 
-  include_tasks: wordpress.yml
-  tags: wordpress
 # Master Task for installing and configuring MariaDB, Apache & WORDPRESS
 - name: enabling the PHP 7.3 Remi repository
   command: yum-config-manager --enable remi-php73 -y
@@ -26,3 +23,7 @@
 - name : Installing and configuring httpd server for WordBress
   include_tasks: webserver.yml
   tags: webserver
+  
+- name: Downloading and configuring WORDPRESS 
+  include_tasks: wordpress.yml
+  tags: wordpress
